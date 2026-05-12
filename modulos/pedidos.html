@@ -1,13 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pedidos</title>
+    <title>Pedidos</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .contenedor{
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, textarea, select{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover{
+            background-color: #218838;
+        }
+
+        a{
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        a:hover{
+            background-color: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>pedidos</h1>
-    <hr>
-      <a href="/index.html" type="button">regresar</a>
+
+    <div class="contenedor">
+
+        <h1>Formulario de Pedidos</h1>
+        <hr>
+
+        <form>
+
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Número de teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="metodo_pago">Método de pago</label>
+            <select id="metodo_pago" name="metodo_pago">
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+                <option value="transferencia">Transferencia</option>
+                <option value="nequi">Nequi</option>
+            </select>
+
+            <label for="pedido">Pedido</label>
+            <textarea id="pedido" name="pedido" rows="4" placeholder="Escribe tu pedido aquí"></textarea>
+
+            <label for="referencias">Referencias</label>
+            <textarea id="referencias" name="referencias" rows="3" placeholder="Ejemplo: casa azul al lado de la tienda"></textarea>
+
+            <button type="submit">Enviar Pedido</button>
+
+        </form>
+
+        <a href="/index.html">Regresar</a>
+
+    </div>
+
 </body>
 </html>
