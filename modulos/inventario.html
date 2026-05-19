@@ -1,90 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="../css/inventario.css" />
-    <title>Inventario</title>
-  </head>
-  <body>
-    <h1>Inventario</h1>
-    <hr />
-    <table class="table">
-      <thead>
-        <tr>
-          <th><abbr title="nom_producto">Nombre del producto</abbr></th>
-          <th><abbr title="cod_producto">Codigo del producto</abbr></th>
-          <th><abbr title="Categoria">Categoria</abbr></th>
-          <th><abbr title="prec_unitario">Precio Unitario</abbr></th>
-          <th><abbr title="Descripciòn">Descripciòn</abbr></th>
-          <th><abbr title="Presentaciòn">Presentaciòn</abbr></th>
-          <th><abbr title="Marca">Marca</abbr></th>
-          <th><abbr title="Precio">Precio</abbr></th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Coca-cola</th>
-          <td>1233344566</td>           
-          <td>Bebida</td>
-          <td>$3.000</td>
-          <td>Bebida gaseosa refrescante</td>
-          <td>Lata</td>
-          <td>Coca-cola</td>
-          <td>250 ml</td>          
-        </tr>
-        <tr>
-          <th>Galletas</th>
-          <td>1233344567</td>           
-          <td>Snack</td>
-          <td>$2.000</td>
-          <td>Galletas de chocolate crujientes</td>
-          <td>Paquete</td>
-          <td>Oreo</td>
-          <td>150 g</td>
-        </tr>
-            <tr>
-            <th>Pan</th>
-            <td>1233344568</td>           
-            <td>Panaderia</td>
-            <td>$1.500</td>
-            <td>Pan fresco y suave</td>
-            <td>Unidad</td>
-            <td>Panadería local</td>
-            <td>500 g</td>  
-        </tr>
-        <tr>
-            <th>Leche</th>
-            <td>1233344569</td>           
-            <td>Lácteos</td>
-            <td>$2.500</td>
-            <td>Leche fresca y nutritiva</td>
-            <td>Botella</td>
-            <td>Alpina</td>
-            <td>1 litro</td>
-        </tr>
-        <tr>
-            <th>Arroz</th>
-            <td>1233344570</td>           
-            <td>Granos</td>
-            <td>$1.200</td>
-            <td>Arroz blanco de alta calidad</td>
-            <td>Bolsa</td>
-            <td>Gallo</td>
-            <td>1 kg</td>
-        </tr>
-  
-      </tbody>
-    </table>
-    <a href="/index.html" type="button">regresar</a>
-  </body>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+
+  <title>Inventario</title>
+</head>
+
+<body class="section">
+
+  <h1 class="title">Inventario</h1>
+
+  <!-- FORMULARIO -->
+  <div class="box">
+    <h2 class="subtitle">Agregar producto</h2>
+
+    <form>
+      <div class="columns is-multiline">
+
+        <div class="column is-6">
+          <label class="label">Nombre del producto</label>
+          <input class="input" type="text" placeholder="Ej: Coca-Cola">
+        </div>
+
+        <div class="column is-6">
+          <label class="label">Categoría</label>
+          <input class="input" type="text" placeholder="Ej: Bebidas">
+        </div>
+
+        <div class="column is-6">
+          <label class="label">Precio Unitario</label>
+          <input class="input" type="number" placeholder="Ej: 3000">
+        </div>
+
+        <div class="column is-6">
+          <label class="label">Descripción</label>
+          <input class="input" type="text" placeholder="Descripción del producto">
+        </div>
+
+        <div class="column is-6">
+          <label class="label">Presentación</label>
+          <input class="input" type="text" placeholder="Ej: Lata">
+        </div>
+
+        <div class="column is-6">
+          <label class="label">Marca</label>
+          <input class="input" type="text" placeholder="Ej: Coca-Cola">
+        </div>
+
+        <div class="column is-6">
+          <label class="label">Cantidad</label>
+          <input class="input" type="text" placeholder="Ej: 250 ml">
+        </div>
+
+      </div>
+
+      <button class="button is-primary" type="submit">
+        Guardar producto
+      </button>
+    </form>
+  </div>
+
+  <!-- TABLA -->
+  <table class="table is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Precio</th>
+        <th>Descripción</th>
+        <th>Presentación</th>
+        <th>Marca</th>
+        <th>Cantidad</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Coca-Cola</td>
+        <td>Bebida</td>
+        <td>$3.000</td>
+        <td>Bebida gaseosa refrescante</td>
+        <td>Lata</td>
+        <td>Coca-Cola</td>
+        <td>250 ml</td>
+      </tr>
+
+      <tr>
+        <td>Galletas</td>
+        <td>Snack</td>
+        <td>$2.000</td>
+        <td>Galletas de chocolate</td>
+        <td>Paquete</td>
+        <td>Oreo</td>
+        <td>150 g</td>
+      </tr>
+      <tr>
+        <th>Pan</th>
+        <td>1233344568</td>
+        <td>Panaderia</td>
+        <td>$1.500</td>
+        <td>Pan fresco y suave</td>
+        <td>Unidad</td>
+        <td>Panadería local</td>
+        <td>500 g</td>
+      </tr>
+      <tr>
+        <th>Leche</th>
+        <td>1233344569</td>
+        <td>Lácteos</td>
+        <td>$2.500</td>
+        <td>Leche fresca y nutritiva</td>
+        <td>Botella</td>
+        <td>Alpina</td>
+        <td>1 litro</td>
+      </tr>
+      <tr>
+        <th>Arroz</th>
+        <td>1233344570</td>
+        <td>Granos</td>
+        <td>$1.200</td>
+        <td>Arroz blanco de alta calidad</td>
+        <td>Bolsa</td>
+        <td>Gallo</td>
+        <td>1 kg</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="/index.html" class="button is-link">
+    Regresar
+  </a>
+
+</body>
+
 </html>
 
-
-
-
+codigo_producto
+hombre_producto
+precio_unitario
+cantidad_producto
+descripcion_producto
