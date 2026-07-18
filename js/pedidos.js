@@ -1,26 +1,66 @@
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
+function ValidarInformacion() {
 
-    const pedidoCliente = {
-        nombre: document.getElementById("nombre").value,
-        telefono: document.getElementById("telefono").value,
-        direccion: document.getElementById("direccion").value,
-        email: document.getElementById("email").value,
-        metodoPago: document.getElementById("metodo_pago").value,
-        pedido: document.getElementById("pedido").value,
-        referencias: document.getElementById("referencias").value
-    };
+    let nombre_completo = document.getElementById("nombre_completo").value;
+    let telefono = document.getElementById("telefono").value;
+    let direccion = document.getElementById("direccion").value;
+    let correo_electronico = document.getElementById("correo_electronico").value;
+    let metodo_pago = document.getElementById("metodo_pago").value;
+    let pedidos = document.getElementById("pedidos").value;
+    let referencias = document.getElementById("referencias").value;
 
-    console.log(pedidoCliente);
+    if (
+        !nombre_completo ||
+        !telefono ||
+        !direccion ||
+        !correo_electronico ||
+        !metodo_pago ||
+        !pedidos ||
+        !referencias
+    ) {
 
-    alert(
-        "Pedido registrado\n\n" +
-        "Nombre: " + pedidoCliente.nombre + "\n" +
-        "Teléfono: " + pedidoCliente.telefono + "\n" +
-        "Dirección: " + pedidoCliente.direccion + "\n" +
-        "Correo: " + pedidoCliente.email + "\n" +
-        "Método de pago: " + pedidoCliente.metodoPago + "\n" +
-        "Pedido: " + pedidoCliente.pedido + "\n" +
-        "Referencias: " + pedidoCliente.referencias
-    );
-});
+        console.log(
+            `Información del Cliente:
+            
+Nombre Completo: ${nombre_completo}
+Número de Teléfono: ${telefono}
+Dirección: ${direccion}
+Correo Electrónico: ${correo_electronico}
+Método de Pago: ${metodo_pago}
+Pedidos: ${pedidos}
+Referencias: ${referencias}`
+        );
+
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Campos Incompletos",
+            showConfirmButton: false,
+            timer: 1500
+        });
+
+    } else {
+
+        console.log(
+            `Información del Cliente:
+            
+Nombre Completo: ${nombre_completo}
+Número de Teléfono: ${telefono}
+Dirección: ${direccion}
+Correo Electrónico: ${correo_electronico}
+Método de Pago: ${metodo_pago}
+Pedidos: ${pedidos}
+Referencias: ${referencias}`
+        );
+
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Información Guardada Correctamente",
+            showConfirmButton: false,
+            timer: 1500
+        });
+
+    }
+}
+
+document.getElementById("btnGuardar").onclick = ValidarInformacion;
