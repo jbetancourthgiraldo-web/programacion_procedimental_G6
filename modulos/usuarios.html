@@ -1,83 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>usuarios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
+
 <body>
-    <h1>usuarios</h1>
-    <hr>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <p class="title is-3 is-spaced">USUARIO</p>
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" href="../index.html">
+            <strong>home</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">USUARIOS</h1>
+      <hr>
+
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="box">
+
+            <div class="field">
+              <label class="label">Nombre completo</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Ingrese su nombre completo" id="nombre_completo">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Correo electrónico</label>
+              <div class="control">
+                <input class="input" type="email" placeholder="Ingrese su correo electrónico" id="email">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Teléfono</label>
+              <div class="control">
+                <input class="input" type="tel" placeholder="Ingrese su número de teléfono" id="telefono">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Dirección</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Ingrese su dirección" id="direccion">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Producto favorito</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Ej: Pizza Napolitana, Hamburguesa Doble" id="producto_favorito">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Comentarios adicionales</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Escriba aquí sus observaciones o comentarios" id="comentarios_adicionales" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="field is-grouped is-grouped-centered mt-5">
+              <div class="control">
+                <button class="button is-primary" id="btnGuardar">Aceptar</button>
+              </div>
+              <div class="control">
+                <button class="button is-light" type="reset">Cancelar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/usuarios.js"></script>
 </body>
-</html>
 
-   
-   <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 400px;
-            margin: 50px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            text-align: center;
-        }
-        input, select, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        button {
-            background-color: #09e263;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0074d3;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h2>Registro de Cliente</h2>
-    <form action="#" method="post">
-        
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" required>
-
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono">
-
-        <label for="direccion">Dirección</label>
-        <textarea id="direccion" name="direccion"></textarea>
-
-        <label for="producto">Producto favorito</label>
-        <select id="producto" name="producto">
-            <option value="hamburguesa">Hamburguesa</option>
-            <option value="pizza">Pizza</option>
-            <option value="perro">Perro caliente</option>
-            <option value="lasana">Lasaña</option>
-        </select>
-
-        <label for="comentarios">Comentarios adicionales</label>
-        <textarea id="comentarios" name="comentarios"></textarea>
-
-          <a href="/index.html" type="button">regresar</a>
-    </form>
-</div>
-
-</body>
 </html>

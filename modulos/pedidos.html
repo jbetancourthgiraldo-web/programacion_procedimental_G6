@@ -1,117 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pedido</title>
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .contenedor{
-            max-width: 500px;
-            background: white;
-            padding: 20px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        }
-
-        h1{
-            text-align: center;
-        }
-
-        label{
-            font-weight: bold;
-        }
-
-        input, textarea, select{
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button{
-            width: 100%;
-            padding: 12px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover{
-            background-color: #218838;
-        }
-
-        a{
-            display: inline-block;
-            margin-top: 15px;
-            text-decoration: none;
-            color: white;
-            background-color: #007bff;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-
-        a:hover{
-            background-color: #0056b3;
-        }
-    </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/pedidos.css">
 </head>
 
 <body>
-
-    <div class="contenedor">
-
-        <h1>Formulario de Pedidos</h1>
-        <hr>
-
-        <form>
-
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="telefono">Número de teléfono</label>
-            <input type="tel" id="telefono" name="telefono" required>
-
-            <label for="direccion">Dirección</label>
-            <input type="text" id="direccion" name="direccion" required>
-
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="metodo_pago">Método de pago</label>
-            <select id="metodo_pago" name="metodo_pago">
-                <option value="efectivo">Efectivo</option>
-                <option value="tarjeta">Tarjeta</option>
-                <option value="transferencia">Transferencia</option>
-                <option value="nequi">Nequi</option>
-            </select>
-
-            <label for="pedido">Pedido</label>
-            <textarea id="pedido" name="pedido" rows="4" placeholder="Escribe tu pedido aquí"></textarea>
-
-            <label for="referencias">Referencias</label>
-            <textarea id="referencias" name="referencias" rows="3" placeholder="Ejemplo: casa azul al lado de la tienda"></textarea>
-
-            <button type="submit">Enviar Pedido</button>
-
-        </form>
-
-        <a href="/index.html">Regresar</a>
-
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <p class="title is-3 is-spaced">PEDIDOS</p>
+      </a>
     </div>
 
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" href="../index.html">
+            <strong>home</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container section">
+    <div class="columns is-centered">
+      <div class="column is-6">
+        <div class="box">
+
+          <h1 class="title has-text-centered">Formulario de Pedido</h1>
+
+          <div>
+
+            <div class="field">
+              <label class="label">Nombre completo</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Ingrese su nombre completo" id="nombre_completo">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Número de teléfono</label>
+              <div class="control">
+                <input class="input" type="tel" placeholder="Ingrese su número de teléfono" id="telefono">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Dirección</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Ingrese su dirección de entrega" id="direccion">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Correo electrónico</label>
+              <div class="control">
+                <input class="input" type="email" placeholder="Ingrese su correo electrónico" id="email">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Método de pago</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="metodo_pago">
+                    <option value="">Seleccione una opción</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Tarjeta_Credito">Tarjeta de Crédito</option>
+                    <option value="Transferencia_Bancaria">Transferencia Bancaria</option>
+                    <option value="Nequi">Nequi</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Pedido</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Describa los productos de su pedido" id="pedido" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Referencias de entrega</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Ej: Torre 2 Apt 501, frente al parque, portón blanco" id="referencias" rows="2"></textarea>
+              </div>
+            </div>
+
+            <div class="field mt-5">
+              <div class="control">
+                <button class="button is-primary is-fullwidth" id="btnGuardar">
+                  Enviar Pedido
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/pedidos.js"></script>
 </body>
+
 </html>

@@ -2,83 +2,120 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Producto</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-
-    <title>Formulario de Inventario</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
 </head>
 
-<body id="section">
-
-    <h1 id="title">Formulario de Inventario</h1>
-
-    <div id="box">
-        <form>
-
-            <div id="field">
-                <label id="label">Nombre del Producto</label>
-                <div id="control">
-                    <input id="input" type="text" placeholder="Ingrese el nombre">
-                </div>
-            </div>
-
-            <div id="field">
-                <label id="label">Categoría</label>
-                <div id="control">
-                    <input id="input" type="text" placeholder="Ingrese la categoría">
-                </div>
-            </div>
-
-            <div id="field">
-                <label id="label">Precio Unitario</label>
-                <div id="control">
-                    <input id="input" type="number" placeholder="Ingrese el precio">
-                </div>
-            </div>
-
-            <div id="field">
-                <label id="label">Descripción</label>
-                <div id="control">
-                    <textarea id="textarea" placeholder="Descripción del producto"></textarea>
-                </div>
-            </div>
-
-            <div id="field">
-                <label id="label">Presentación</label>
-                <div id="control">
-                    <input id="input" type="text" placeholder="Ej: Lata, Botella">
-                </div>
-            </div>
-
-            <div id="field">
-                <label id="label">Marca</label>
-                <div id="control">
-                    <input id="input" type="text" placeholder="Ingrese la marca">
-                </div>
-            </div>
-
-            <div id="field">
-                <label id="label">Cantidad</label>
-                <div id="control">
-                    <input id="input" type="text" placeholder="Ej: 250 ml, 1 kg">
-                </div>
-            </div>
-
-            <div id="field">
-                <button id="button" type="submit">
-                    Guardar Producto
-                </button>
-            </div>
-
-        </form>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <p class="title is-3 is-spaced">inventario</p>
+      </a>
     </div>
 
-    <a href="/index.html" id="link">
-        Regresar
-    </a>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" href="../index.html">
+            <strong>home</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <div class="box">
+
+            <h1 class="title has-text-centered">
+              Registro de Productos
+            </h1>
+
+            <div>
+
+              <div class="field">
+                <label class="label">Nombre del Producto</label>
+                <div class="control">
+                  <input class="input" type="text" name="nombre_producto" placeholder="Ingrese el nombre" id="nombre_producto">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Categoría</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select name="categoria_producto" id="categoria_producto">
+                      <option value="">Seleccione una categoría</option>
+                      <option value="alimento">Alimentos</option>
+                      <option value="bebida">Bebidas</option>
+                      <option value="limpieza">Limpieza</option>
+                      <option value="tecnologia">Tecnología</option>
+                      <option value="otros">Otros</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Precio Unitario</label>
+                <div class="control">
+                  <input class="input" type="number" step="0.01" name="precio_unitario" placeholder="Ingrese el precio unitario" id="precio_unitario">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Descripción</label>
+                <div class="control">
+                  <textarea class="textarea" name="descripcion_producto" placeholder="Ingrese una breve descripción" id="descripcion_producto" rows="2"></textarea>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Presentación</label>
+                <div class="control">
+                  <input class="input" type="text" name="presentacion_producto" placeholder="Ej: Botella 500ml, Caja x 12, Bolsa 1kg" id="presentacion_producto">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Marca</label>
+                <div class="control">
+                  <input class="input" type="text" name="marca_producto" placeholder="Ingrese la marca" id="marca_producto">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Cantidad</label>
+                <div class="control">
+                  <input class="input" type="number" name="cantidad_producto" placeholder="Ingrese la cantidad en stock" id="cantidad_producto">
+                </div>
+              </div>
+
+              <div class="field mt-5">
+                <div class="control">
+                  <button class="button is-primary is-fullwidth" id="btnGuardar">
+                    Guardar Producto
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/inventario.js"></script>
 </body>
 
 </html>
